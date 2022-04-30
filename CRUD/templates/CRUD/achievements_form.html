@@ -1,0 +1,29 @@
+{% extends 'CRUD/main.html' %}
+
+{% block content %}
+<h3>Achievement Details:</h3><hr>
+<form method="POST" action="" enctype="multipart/form-data"> 
+   {% csrf_token %}
+
+
+        <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label"><b>Title</b></label>
+  <input type="text" class="form-control" id="achievement-title" placeholder="* Your 'Achievement' title" required>
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label"><b>Description</b></label>
+  <textarea class="form-control" id="achievement-description" rows="3"></textarea>
+</div>
+    <div class="mb-3">
+  <label for="exampleFormControlInput2" class="form-label"><b>Support</b></label>
+  <input type="text" class="form-control" id="achievement-support" placeholder="Support provided from college (if any)">
+</div>
+<div class="mb-3">
+    <label for="formFileSm" class="form-label"><b>* Certificate</b></label>
+  <input class="form-control form-control-sm" id="achievement-certificate" type="file" required>
+</div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+
+</form>
+{% endblock %}
